@@ -19,7 +19,7 @@ The Message API has the following schema and HTTP endpoints
 {
     "id" : <Integer, unique>,
     "text" : <String>,
-    "isPalindrome : <boolean, read-only>
+    "isPalindrome" : <boolean, read-only>
 }
 ```
 
