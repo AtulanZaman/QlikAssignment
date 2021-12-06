@@ -26,7 +26,7 @@ The Message API has the following schema and HTTP endpoints
 - GET: /messages
 - GET: /messages/{id}
 - POST: /messages
-- PUT: /messageS/{id}
+- PUT: /messages/{id}
 - DELETE: /messages/{id}
 
 
