@@ -15,21 +15,24 @@ The "isPalindrome" property of the "/messages" API indicates whether a text mess
 
 ### API Documentation
 The Message API has the following schema and HTTP endpoints
+```json
 {
     "id" : <Integer, unique>,
     "text" : <String>,
     "isPalindrome : <boolean, read-only>
 }
+```
 
-GET: /messages
-GET: /messages/{id}
-POST: /messages
-PUT: /messageS/{id}
-DELETE: /messages/{id}
+- GET: /messages
+- GET: /messages/{id}
+- POST: /messages
+- PUT: /messageS/{id}
+- DELETE: /messages/{id}
 
 
-## API Example
+### API Example
 Example response for a "GET: /messages" request
+```json
 {
     "_embedded": {
         "messageList": [
@@ -67,6 +70,7 @@ Example response for a "GET: /messages" request
         }
     }
 }
+```
 
 ### Testing Strategy
 This project implements a unittest and 5 API tests for each of the HTTP methods.
@@ -76,8 +80,8 @@ The JUnit test is implemented in MessagesApplicationTests.java.
 
 API tests:
 The API tests are implemented in a Postman collection located in directory "test/api/postman". The collection has a request for each mapping, and tests to assert the values and structure of the expected response from the server.
-    - GET : Assert status, collection of messages and structure of response to check RESTful properties.
-    - GETOne : Assert status, structure and values of a response to get 1 message using and id.
-    - POST : Assert status, structure and values of a response to create a new message.
-    - PUT : Assert status, structure and values of response to update a message.
-    - DELETE : Assert status of request to successfully delete a message.
+- GET : Assert status, collection of messages and structure of response to check RESTful properties.
+- GETOne : Assert status, structure and values of a response to get 1 message using and id.
+- POST : Assert status, structure and values of a response to create a new message.
+- PUT : Assert status, structure and values of response to update a message.
+- DELETE : Assert status of request to successfully delete a message.
